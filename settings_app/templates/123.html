@@ -1,0 +1,74 @@
+<{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static "css/material.css" %}">
+  <link rel="stylesheet" href="{% static "css/material.min.css.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js" %}">
+  <link rel="stylesheet" href="{% static "js/script.js" %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  
+  <title> Cogzidel Tech</title>
+  </head>
+  
+  <body>
+     <div class="mdl-layout__container"> 
+     <div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+     <header class="mdl-layout__header ">
+     <div class="mdl-layout__header-row">
+       <div id="logo">
+                  <h3>Arcane</h3>
+              </div>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" href="/login/">Log Out</a>
+      </nav>
+      </div>
+      </header>
+
+
+<main class="mdl-layout__content">
+        <div id="draw">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer">
+           <span class="mdl-layout-title">
+             
+           </span>
+                   <nav class="mdl-navigation">
+           <a class="mdl-navigation__link collapsible popout"  href="/dashboard/">Dashboard</a>
+           <a class="mdl-navigation__link collapsible popout" id="drop-down" >Site Management
+</a>
+
+           <a class="mdl-navigation__link collapsible popout"  id ="drop-down1" >Member Management</a>
+           <a class="mdl-navigation__link collapsible popout" href="/apimanage/">API Management</a>
+           <a class="mdl-navigation__link collapsible popout"  id="drop-down2" >Trip History</a>
+           </nav>
+      </div>
+   </div>
+ </div>
+</main>
+
+</div>
+</div>
+
+ <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+        
+
+</body>
+</html>

@@ -1,0 +1,536 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static "css/material.css" %}">
+  <link rel="stylesheet" href="{% static "css/material.min.css.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js" %}">
+  <link rel="stylesheet" href="{% static "js/script.js" %}">
+  <link rel="stylesheet" href="https://code.jquery.com/jquery-1.12.4.js
+">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  
+<link rel="stylesheet" href="path_to/getmdl-select/getmdl-select.min.css">
+<script defer src="path_to/getmdl-select/getmdl-select.min.js"></script>
+
+  
+  <title> Cogzidel Tech</title>
+  </head>
+  
+  <body>
+     <div class="mdl-layout__container"> 
+     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+     <header class="mdl-layout__header ">
+     <div class="mdl-layout__header-row">
+      <div id="logo">
+         <a href="/dashboard/" style="color:white;text-decoration:none !important;"><h3>Arcane</h3></a>
+      </div>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link" href="/">Log Out</a>
+      </nav>
+      </div>
+      </header>
+
+      <main class="mdl-layout__content">
+<div id="draw">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      
+           <nav class="mdl-navigation">
+           <a class="mdl-navigation__link"  href="/dashboard/" style="color:white;text-decoration:none!important; ">Dashboard</a>
+           <a class="mdl-navigation__link" id="drop-down" href="#" is active style="color:white;text-decoration:none!important; ">Site Management</a>
+           <a class="mdl-navigation__link"  id ="drop-down1" href="#" is active style="color:white;text-decoration:none!important; ">Member Management</a>
+           <a class="mdl-navigation__link" href="/apimanage/" style="color:white;text-decoration:none!important; ">API Management</a>
+           <a class="mdl-navigation__link"  id="drop-down2" href="#" is active style="color:white;text-decoration:none!important; ">Trip History</a>
+           </nav>
+      </div>
+   </div>
+ </div>
+
+
+
+ <div> <h4> Driver Management</h4></div>
+
+<div class="mdl-cell mdl-cell--12-col mdl-grid " id="example_wrapper">   
+        <div class="mdl-layout-spacer "></div>
+    
+        <div class="mdl-cell mdl-cell--6-col" style="margin-right: -363px !important;" id="drop"> 
+        <label><h5> Show </h5>
+<div class="mdl-textfield mdl-js-textfield">
+        <select class="mdl-cell--6-col mdl-grid mdl-selectfield__select" id="professsion1" name="professsion">
+          <option value="option1">10</option>
+          <option value="option2">25</option>
+          <option value="option3">50</option>
+          <option value="option3">100</option>
+        </select>
+        </div>
+      <h6>Entries</h6></label> 
+        </div>
+        <div class="mdl-layout-spacer "></div>
+</div>
+        <div id="search">
+        <form action="#" id="search">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="site-search">
+                <!-- <i class="material-icons">search</i> -->
+              </label>
+              <div class="mdl-textfield">
+                <input class="border_font mdl-textfield__input" type="search" id="site-search" />
+                <label class="mdl-textfield__label" for="site-search"></label>
+              </div>
+            </div>
+        </form>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col mdl-grid " id="table">   
+        <div class="mdl-layout-spacer "></div>
+       <!-- <div class="mdl-layout-table"> -->
+        <div class="scrollmenu mdl-cell mdl-cell--8-col">
+<table id="example" class="mdl-data-table" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+      <th class="mdl-data-table__cell--non-numeric" id="head">First Name</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head1">Last Name</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head2">Email</th>
+      <th  class="mdl-data-table__cell--non-numeric" id="head2">Availability</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head2">Category</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head3">Phone</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head3">City</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head3">Doc Status</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head4" style="text-align:center">Action</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head5">Photo</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head6">Change Password</th>
+      <th class="mdl-data-table__cell--non-numeric" id="head6">Create Date</th>
+            </tr>
+        </thead>
+        <!-- <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> -->
+        <tbody>
+      <tr>
+      <td class="mdl-data-table__cell--non-numeric">Matheus</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark@gmail.com</td>
+      <td class="mdl-data-table__cell--non-numeric">ON</td>
+      <td class="mdl-data-table__cell--non-numeric">Sedan</td>
+      <td class="mdl-data-table__cell--non-numeric">9159468521</td>
+      <td class="mdl-data-table__cell--non-numeric">Madurai</td>
+      <td class="mdl-data-table__cell--non-numeric">Accepted</td>
+      <td class="mdl-data-table__cell--non-numeric" id="edit"><a href="/editdriver/" style="color:black; padding:8px;text-decoration:none;">Edit</a>/Delete &nbsp<i style="font-size:16px" class="fa">&#xf040;</i></td>
+      <td class="mdl-data-table__cell--non-numeric"><i style="font-size:24px" class="fa">&#xf030;</i></td>
+      <td class="mdl-data-table__cell--non-numeric">Change Password</td>
+      <td class="mdl-data-table__cell--non-numeric">05-02-2018</td>
+      </tr>
+      <tr>
+      <td class="mdl-data-table__cell--non-numeric">Matheus</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark@gmail.com</td>
+      <td class="mdl-data-table__cell--non-numeric">ON</td>
+      <td class="mdl-data-table__cell--non-numeric">Sedan</td>
+      <td class="mdl-data-table__cell--non-numeric">9159468521</td>
+      <td class="mdl-data-table__cell--non-numeric">Madurai</td>
+      <td class="mdl-data-table__cell--non-numeric">Accepted</td>
+  <td class="mdl-data-table__cell--non-numeric"><a href="/editdriver/" style="color:black;padding:8px; text-decoration:none;">Edit</a>/Delete  &nbsp<i style="font-size:16px" class="fa">&#xf040;</i></td>
+      <td class="mdl-data-table__cell--non-numeric"><i style="font-size:24px" class="fa">&#xf030;</i></td>
+      <td class="mdl-data-table__cell--non-numeric">Change Password</td>
+      <td class="mdl-data-table__cell--non-numeric">05-02-2018</td>
+      </tr>
+      <tr>
+      <td class="mdl-data-table__cell--non-numeric">Matheus</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark</td>
+      <td class="mdl-data-table__cell--non-numeric">Mark@gmail.com</td>
+      <td class="mdl-data-table__cell--non-numeric">ON</td>
+      <td class="mdl-data-table__cell--non-numeric">Sedan</td>
+      <td class="mdl-data-table__cell--non-numeric">9159468521</td>
+      <td class="mdl-data-table__cell--non-numeric">Madurai</td>
+      <td class="mdl-data-table__cell--non-numeric">Accepted</td>
+      <td class="mdl-data-table__cell--non-numeric"><a href="/editdriver/" style="color:black;padding:8px; text-decoration:none;">Edit</a>/Delete  &nbsp<i style="font-size:16px" class="fa">&#xf040;</i></td>
+      <td class="mdl-data-table__cell--non-numeric"><i style="font-size:24px" class="fa">&#xf030;</i></td>
+      <td class="mdl-data-table__cell--non-numeric">Change Password</td>
+      <td class="mdl-data-table__cell--non-numeric">05-02-2018</td>
+      </tr>
+      </tbody>
+    </table>
+
+</div>
+</div>
+<div id="button">
+<div class="mdl-cell mdl-cell--12-col mdl-grid "> 
+  <div class="mdl-layout-spacer"></div>
+  <div id="lab">
+  <label id="ent">Showing 1 to 10 Entries</label>
+</div>
+
+  <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    Previous
+  </button>
+</div>
+<!-- <div class="mdl-cell mdl-cell--6-col mdl-grid " style=""> 
+  <div class="mdl-layout-spacer"></div> -->
+
+  <button id="button3" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    Next
+  </button>
+<!-- </div> -->
+</div>
+
+</main>
+<div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+  <footer class="mdl-mini-footer mdl-layout--fixed-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+  <div class="mdl-logo">
+     Powered By Cogzidel Technologies
+    </div>
+   
+  </div>
+  </footer>
+</div>
+
+</div>
+</div>
+<div class="mdl-menu__outline mdl-menu--bottom-left" style="width: 241.406px; height: 113px;"></div>
+ <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down">
+  <li class="mdl-menu__item"><a href="/site/" style="color:black;text-decoration: none;">Site Settings</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/changepassword/" style="color:black;text-decoration: none;">Change Password</li>
+</ul>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down1">
+  <li class="mdl-menu__item"><a href="/rider/" style="color:black;text-decoration: none;">Rider Management</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/driver/" style="color:black;text-decoration: none;">Driver Management</li>
+</ul> 
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down2">
+  <li class="mdl-menu__item"><a href="/pending/" style="color:black;text-decoration: none;">Pending Payment History</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/paid/" style="color:black;text-decoration: none;">Paid Payment History</li>
+</ul>
+
+</body>
+
+</html>
+<style>
+  select#professsion1 {
+    margin-top: -42px;
+    padding: left:12px;
+    margin-right: 589px;
+    /* padding-right: 3px; */
+    width: 10%;
+}
+#search {
+    float: right;
+    margin: 100px 100;
+    margin: -108px 75px 83px 117px;
+}
+div#table {
+    width: 108%;
+    /* height: 47%; */
+    max-height: -48%;
+}
+h6{
+    font-weight: 400;
+    line-height: 24px;
+    margin: -27px 80px 71px 385px;
+        margin-top: -11%;
+}
+.mdl-cell.mdl-cell--12-col.mdl-grid {
+    margin-left: -127px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 32px 276px 0px;
+}
+div#table {
+    /*margin-top: 274px;*/
+    float:left;
+}
+.mdl-data-table {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.12);
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 13px;
+    background-color: #fff;
+    width: 69%;
+    margin-left:20px;
+}
+table.mdl-data-table.mdl-js-data-table {
+    padding-left: 42px;
+    width: 69%;
+    padding-right: 253px;
+    min-width: 795px;
+    margin-right: -61px;
+}
+
+footer.mdl-mini-footer {
+    margin-left: -185px;
+    padding-right: 443px;
+    padding-left: -70px;
+    margin-right: -174px;
+    width: 100%;
+}
+
+
+.mdl-mini-footer .mdl-logo {
+    line-height: 14px;
+    margin-left: 638px;
+    width:100% !important;
+    font-size:15px;
+}
+select#professsion1 {
+    margin-top: -42px;
+    padding: left:12px;
+    /* margin-right: 601px; */
+    /* padding-right: 3px; */
+    margin-left: 20px;
+    width: 9%;
+}
+div#lab {
+    margin-right: 179px;
+    margin-top: 16px;
+}
+th#head {
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head1{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head2{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head3{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head4{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head5{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+#head6{
+    background-color: rgba(117, 117, 117, 0.56);
+    color: black;
+}
+
+h6 {
+    font-weight: 400;
+    line-height: 24px;
+    /* margin: -25px 85px 46px 198px; */
+    margin-left: 86px;
+}
+.mdl-cell.mdl-cell--12-col.mdl-grid {
+    margin-left: -127px;
+    padding-top: -31px;
+    min-width: 2px;
+    /* max-width: 117px; */
+    margin-top: -35px;
+}
+
+.mdl-cell.mdl-cell--6-col{
+  margin-right: -144px !important;
+    margin-bottom: 9px;
+}
+.mdl-mini-footer .mdl-logo {
+    line-height: 14px;
+    margin-left: 879px;
+}
+
+#search {
+    float: right;
+    margin: 100px 100;
+    margin: -103px 75px 83px 117px;
+}
+h5 {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    margin: 45px 0 -7px;
+    margin-left: -45px;
+}
+
+
+.mdl-layout__drawer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 240px;
+    height: 96%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-sizing: border-box;
+    border-right: 1px solid #e0e0e0;
+    background: #fafafa;
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    color: #424242;
+    overflow: visible;
+    overflow-y: auto;
+    z-index: 5;
+}
+
+select#professsion1 {
+    margin-top: -60px;
+    padding: left:12px;
+    /* margin-right: 601px; */
+    /* padding-right: 3px; */
+    margin-left: 19px;
+    width: 19%;
+}
+h6 {
+    font-weight: 400;
+    line-height: 24px;
+    /* margin: -25px 85px 46px 198px; */
+    margin-left: 98px;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    zoom: 1;
+}
+
+
+div.scrollmenu {
+    /* background-color: #333; */
+    overflow: scroll;
+    /* white-space: nowrap; */
+    width: 277%;
+    
+}
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    /*text-align: center;*/
+    padding: 38px;
+    text-decoration: none;
+}
+
+div#table {
+    
+    margin-top: -12%;
+    padding-left: 433px;
+}
+
+.mdl-data-table {
+    position: relative;
+    border: 1px solid rgba(0,0,0,.12);
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 13px;
+    background-color: #fff;
+    width: 69%;
+    margin-left: 1px;
+}
+ div#lab {
+    margin-right: 236px;
+    margin-top: 16px;
+    padding-right: -140px;
+    font-size: 18px;
+}
+label#ent {
+   
+    padding: right;
+    /* margin-right: -181px; */
+    margin: 100px 348px 100px 347px;
+}
+
+button#button3 {
+    margin: -53px 74px 63px 382px;
+    padding-left: -105px;
+    text-align: center;
+    float: right;
+    padding-left: -63px;
+    padding-left: 3%;
+}
+button#button2 {
+    margin-top: 5px;
+    margin-right: 70px;
+}
+html, body {
+    font-family: "Helvetica","Arial",sans-serif;
+    font-size: 6px;
+    font-weight: 400;
+    line-height: 0px;
+}
+div.scrollmenu {
+    /* background-color: #333; */
+    overflow-x: scroll;
+    /* overflow: hidden; */
+    height: 50%;
+    /* width: 50%; */
+    z-index: 999;
+}
+
+form#search {
+    margin-left: 328px;
+    margin-top: -13%;
+    float: right;
+    margin-right: -81px;
+}
+input#site-search {
+    width: 76%;
+}
+label.mdl-textfield__label {
+    width: 76%;
+}
+.border_font
+{
+
+    
+    border:1px solid;
+    padding-bottom:0%;
+        margin-top: 25px;
+        margin-left: -463px;
+
+}
+.border_font {
+    border: 1px solid;
+    padding-bottom: 0%;
+    margin-top: 25px;
+    margin-left: 0px;
+}
+.mdl-menu__outline.mdl-menu--bottom-left
+{
+    width: 240.406px !important;
+    height: 113px !important;
+}
+</style>

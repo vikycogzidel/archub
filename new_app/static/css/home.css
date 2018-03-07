@@ -1,0 +1,12 @@
+body{
+	
+	background-color: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+}
+h3
+{
+	color : black;
+}
+
+.mdl-layout__container {
+    background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+}

@@ -1,0 +1,364 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static "css/material.css" %}">
+  <link rel="stylesheet" href="{% static "css/material.min.css.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js.map" %}">
+  <link rel="stylesheet" href="{% static "js/material.min.js" %}">
+  <link rel="stylesheet" href="{% static "js/script.js" %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  
+  <title> Cogzidel Tech</title>
+  </head>
+  
+  <body>
+     <div class="mdl-layout__container"> 
+     <div class="demo-layout-transparent mdl-layout mdl-js-layout mdl-layout--fixed-header">
+           <header class="mdl-layout__header ">
+           <div class="mdl-layout__header-row">
+           <div id="logo">
+           <a href="/dashboard/" style="color:white; text-decoration:none !important;"><h3>Arcane</h3></a>
+           </div>
+           <div class="mdl-layout-spacer"></div>
+           <nav class="mdl-navigation mdl-layout--large-screen-only">
+           <a class="mdl-navigation__link" href="/">Log Out</a>
+           </nav>
+           </div>
+           </header>
+
+      <main class="mdl-layout__content">
+        <div id="draw">
+           <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+          <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50" id="drawer">
+      
+           <span class="mdl-layout-title">
+           </span>
+           <nav class="mdl-navigation">
+           <a class="mdl-navigation__link collapsible popout"  href="/dashboard/" style="color:white;text-decoration:none!important; ">Dashboard</a>
+           
+           <a class="mdl-navigation__link collapsible popout" id="drop-down" style="color:white;text-decoration:none !important; ">Site Management
+           </a>
+
+           <a class="mdl-navigation__link collapsible popout"  id ="drop-down1" style="color:white;text-decoration:none!important; ">Member Management</a>
+           <a class="mdl-navigation__link collapsible popout" href="/apimanage/" style="color:white;text-decoration:none!important; ">API Management</a>
+           <a class="mdl-navigation__link collapsible popout"  id="drop-down2" style="color:white;text-decoration:none!important; " >Trip History</a>
+           </nav>
+           </div>
+           </div>
+        </div>
+
+
+ 
+     <div class="mdl-grid add_btn">
+
+        <div class="mdl-layout-spacer "></div>
+           <div class="mdl-cell mdl-cell--6-col">
+               <h4>Site Settings</h4>
+           </div>
+        <div class="mdl-layout-spacer"></div>
+      </div>
+      <hr id="horizontal">
+
+
+<div class="gap">
+          <div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+                <div class="mdl-layout-spacer "></div>
+                <label id="a1">Site Title*  </label>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin-right: -183px !important;"> 
+                <div class="mdl-textfield mdl-js-textfield">
+                <input class=" border_font mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample3" ></label>
+                </div>
+                </div>
+          </div>
+
+
+          <div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+                <div class="mdl-layout-spacer "></div>
+                <label id="a2">Site Slogan*</label>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin-right: -183px !important;"> 
+                <div class="mdl-textfield mdl-js-textfield">
+                <input class=" border_font mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample3" ></label>
+                </div>
+                </div>
+          </div>
+
+          <div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+                <div class="mdl-layout-spacer "></div>
+                <label id="a3"> Admin Email*</label>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin-right: -183px !important;"> 
+                <div class="mdl-textfield mdl-js-textfield">
+                <input class=" border_font mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample3" ></label>
+                </div>
+                </div>
+           </div>
+
+           <div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+                <div class="mdl-layout-spacer "></div>
+                <label id="a4">Admin Mobile Number* </label>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin-right: -183px !important;"> 
+                <div class="mdl-textfield mdl-js-textfield">
+                <input class=" border_font mdl-textfield__input" type="text" id="sample1">
+                <label class="mdl-textfield__label" for="sample3" ></label>
+                </div>
+                </div>
+           </div>
+
+           <div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+                <div class="mdl-layout-spacer "></div>
+                <label id="a5">choose Logo*</label>
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-cell mdl-cell--6-col" style="margin-right: -183px !important;"> 
+                <div class="mdl-textfield mdl-js-textfield">
+                <input id="fileInput" type="file">
+                <md-button class="md-raised" ng-click="upload()">
+                </md-button>
+                </div>
+                </div>
+           </div>
+
+           <div id="sub">
+              <button id="button2" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+               Update
+              </button>
+           </div>
+
+  </div>
+
+</main>
+<div class="mdl-cell mdl-cell--12-col mdl-grid " style="">   
+  <footer class="mdl-mini-footer mdl-layout--fixed-mini-footer" style="margin-left: -85px;
+    padding-right: 478px;
+    padding-left: -70px;
+    margin-right: -33px;
+    padding-right: 65%;">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">
+     Powered By Cogzidel Technologies
+    </div>
+    
+  </div>
+</footer>
+</div>
+
+
+         
+</div>
+</div>
+<div class="mdl-menu__outline mdl-menu--bottom-left" style="width: 239.406px;height: 113px;"></div>
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down">
+  <li class="mdl-menu__item"><a href="/site/" style="color:black;text-decoration: none;">Site Settings</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/changepassword/" style="color:black;text-decoration:none;">Change Password</li>
+</ul>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down1">
+  <li class="mdl-menu__item"><a href="/rider/" style="color:black;text-decoration:none;">Rider Management</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/driver/" style="color:black;text-decoration: none;">Driver Management</li>
+</ul> 
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu header_color"
+    for="drop-down2">
+  <li class="mdl-menu__item"><a href="/pending/" style="color:black;text-decoration:none;">Pending Payment History</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="/paid/" style="color:black;text-decoration: none;">Paid Payment History</li>
+</ul>
+
+</body>
+</html>     
+
+
+<style>
+ form {
+    margin-bottom: -31px;
+    margin-top: 105px;
+    height: 0px;
+    /* width: 100%; */
+    margin: 82px 122px 50px 169px;
+}
+label {
+    line-height: 46px;
+}
+div#sub {
+    margin: 20px 32px 20px 1px !important;
+}
+#fileInput {
+    margin-left: -196px;
+    margin-top: -19px;
+}
+button#button2 {
+    margin-top: 20px;
+    margin-right: -44px;
+    margin-left: 51%;
+}
+
+#professsion1 {
+    margin-left: -183px;
+    margin-top: -23px;
+}
+.mdl-textfield__label{
+color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+       left: -462px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+   
+
+}
+.mdl-textfield.mdl-js-textfield.is-upgraded {
+    margin-left: 262px;
+    margin-top: :20px;
+    margin-bottom: 82px;
+    margin-top: -61px;
+   
+}
+.mdl-textfield__input {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    display: block;
+    font-size: 16px;
+    font-family: "Helvetica","Arial",sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: 0 0;
+    text-align: left;
+    color: inherit;
+      margin-left: -493px;
+}
+form {
+    margin-top: 105px;
+     width: 100%; 
+    margin: 86px 78px -83px -595px;
+}
+/*footer.mdl-mini-footer {
+    /*margin-left: -185px;*/
+    padding-right: 839px; 
+        padding-left: 36px; 
+   
+}*/
+.mdl-selectfield.mdl-js-selectfield {
+    margin-top: -99px;
+    margin-left: -301px;
+
+}
+label {
+    line-height: 61px;
+}
+.col{
+    height: 98px !important;
+}
+.mdl-cell.mdl-cell--12-col.mdl-grid {
+    height: 47px;
+}
+
+
+
+label#a1 {
+    margin-left: -17px;
+
+    margin-top: -8px;
+}
+#a3 {
+    margin-left: 11px;
+    margin-top: -8px;
+}
+#a4 {
+    margin-left: 65px;
+    margin-top: -8px;
+}
+#a5 {
+    margin-left: 7px;
+    margin-top: -8px;
+}
+
+
+.gap {
+    margin-left: 33px;
+}
+
+#button3 {
+    /* margin-left: 601px; */
+    margin-bottom: 173px;
+    margin-left: 65px;
+}
+#sub {
+    margin: 83px 79px 63px -131px;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 26px 100px -10px -41px;
+}
+.mdl-mini-footer .mdl-logo {
+    line-height: 0px;
+    margin-left: 413px;
+    width: 100%;
+    padding-left: -14em;
+}
+.border_font
+{
+    border:1px solid;
+    padding-bottom:0%;
+    margin-top: 25px;
+    margin-left: -463px;
+}
+h4 {
+    font-size: 24px;
+    line-height: 32px;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 26px 100px -25px 186px;
+}
+.mdl-grid.add_btn {
+    width: 100%;
+    margin-left: -6px;
+}
+
+.mdl-cell.mdl-cell--12-col.mdl-grid {
+    height: 47px;
+    margin-left: 6px;
+}
+
+.mdl-selectfield.mdl-js-selectfield {
+    /* margin-top: 4px; */
+    /*margin-right: -266px;*/
+    /* margin-right: 550px; */
+       margin: 25px 521px 65px 79px;
+.drop {
+       margin-right: -214px;
+}
+.mdl-selectfield.mdl-js-textfield.mdl-textfield--raised.mdl-js-ripple-effect.land {
+    margin-left: 178px;
+}
+.mdl-selectfield.mdl-js-selectfield {
+    margin-top: -99px;
+    margin-left: -301px;
+    
+}
+
+hr#horizontal {
+    margin-top: -20px;
+}
+/*
+.mdl-menu__outline.mdl-menu--bottom-left
+ {
+    width: 241.406px;
+    height: 113px;
+}*/
+</style>
