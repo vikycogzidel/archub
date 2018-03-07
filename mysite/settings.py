@@ -27,7 +27,7 @@ SECRET_KEY = 't46cfs_-jvm2%=s&d!4t6^o29msuk8_$zfeo52wi1qu=x=bib3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [ '127.0.0.1','localhost','arcgit.herokuapp.com']
+ALLOWED_HOSTS = [ '127.0.0.1','localhost','archub.herokuapp.com']
 
 
 # Application definition
