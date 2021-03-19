@@ -29,7 +29,7 @@ django-picklefield==0.3.0
 django-recaptcha==1.0.5
 django-robots==1.1
 django-tinymce==1.5.3
-djangorestframework==3.7.7
+djangorestframework==3.11.2
 enum34==1.1.6
 flake8==3.5.0
 gunicorn==19.7.1
